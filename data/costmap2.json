@@ -1,0 +1,36 @@
+{
+    "meta" : {
+        "service" : "costmap",
+        "capabilities" : {
+            "cost-types" : [
+            {
+                "cost-mode" : "ordinal",
+                "cost-metric" : "routingcost"
+            }
+            ]
+        },
+        "uses" : [
+            "test_sf_networkmap"
+        ]
+    },
+
+    "data" : {
+        "meta" : {
+            "dependent-vtags" : [
+            {
+                "resource-id": "test_sf_networkmap",
+                "tag": "3ee2cb7e8d63d9fab71b9b34cbf764436315542e"
+            }
+          	],
+            "cost-type" : {
+				"cost-mode": "ordinal",
+                "cost-metric": "routingcost"
+            }
+        },
+        "cost-map" : {
+            "PID1": { "PID1": 1, "PID2": 2, "PID3": 3 },
+            "PID2": { "PID1": 3, "PID2": 1, "PID3": 2 },
+            "PID3": { "PID1": 2, "PID2": 3 }
+        }
+    }
+}
